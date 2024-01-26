@@ -4,7 +4,9 @@
 function isEvenNumber(num) {
   // Перевірити, чи число num є парним
   // Повернути результат перевірки (true або false) як результат функції
-  
+  if (num % 2 == 0) {
+    return true;
+  }
 }
 
 console.log("Завдання 1 ====================================");
@@ -73,7 +75,7 @@ console.log("isPositiveNumber(-2)", isPositiveNumber(-2)); // Виведе: fals
 
 function isEmptyString(str) {
   // Перевіряємо, чи рядок str дорівнює пустому рядку ('')
-  const lengthStr = '' {
+   if (str === "") {
     return true;
   }
   else {
@@ -139,7 +141,7 @@ function getUserStatus(age) {
     return Неповнолітній;
   }
   // Якщо age більше або дорівнює 18 і менше 65, то користувач є "Дорослим"
-  if (age >= 18 < 65) {
+  if (age >= 18 && age < 65) {
     return Дорослий;
   }
   // В іншому випадку (якщо age більше або дорівнює 65), то користувач є "Пенсіонером"
@@ -231,7 +233,7 @@ function factorial(n) {
     return 1;
   }
   // Якщо n більше за 1, ми множимо n на результат виклику тієї самої функції з n-1.
-  else (n > 1) {
+  else {
     return n * factorial(n-1);
   }
 }
@@ -256,6 +258,7 @@ console.log("Завдання 12 ====================================");
 // Задача 13: Задача: створити стрілкову функцію, яка приймає два числа і повертає їх добуток.
 let multiply = (x, y) => {
   // Повертаємо добуток x та y
+  return x + y;
 };
 
 console.log("Завдання 13 ====================================");
@@ -298,11 +301,12 @@ console.log("Завдання 15 ====================================");
 // console.log("squareArea(5)", squareArea(5)); // Обчислює і виводить 25
 // console.log("squareArea(5)", squareArea(5)); // Виводить "Fetching from cache" і виводить 25 з кешу
 // console.log("squareArea(6)", squareArea(6)); // Обчислює і виводить 36
-// console.log("squareArea(6)", squareArea(6)); // Виводить "Fetching from cache" і виводить 36 з кешу
+console.log("squareArea(6)", squareArea(6)); // Виводить "Fetching from cache" і виводить 36 з кешу
 
 // Задача 16: Задача: створити функціональний вираз для обчислення кубу числа.
 let cube = function (n) {
   // Повертаємо n в кубі
+  return n ** 3;
 };
 
 console.log("Завдання 16 ====================================");
