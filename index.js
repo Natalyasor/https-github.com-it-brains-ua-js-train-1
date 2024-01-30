@@ -281,19 +281,36 @@ console.log("Завдання 14 ====================================");
 
 function memoizedArea() {
   // Ініціалізуємо примітивні змінні для зберігання попереднього аргументу та результату
+  
+   let prevSide = null;
+   let prevResult = null;
   // Повертаємо функцію яка приймає аргумент side - сторону квадрата
+   return function (side) {
   // Перевіряємо, чи є введена сторона такою ж, як і в попередньому виклику
+  if (side === prevSide) {
   // Виводимо повідомлення Fetching from cache
+  console.log("Fetching from cache");
   // Повертаємо попереднє значення
+  return prevResult;
+}
   // Якщо сторона відрізняється від попередньої, обчислюємо площу та зберігаємо результат та аргумент для майбутнього використання
+  else {
   // Виводимо повідомлення Calculating result
+  console.log("Calculating result");
   // Розраховуємо площу
+  let result = side * side;
   // prevSide присвоюємо сторону квадрата
+  prevSide = side;
   // prevResult просвоюємо площу квадрата
+  prevResult = result;
   // Повертаємо площу
+  return result;
+}
+};
 }
 
 //Створюємо змінну squareArea якій присвоємо результат виконання функції memoizedArea
+let sguareArea = memoizedArea();
 
 console.log("Завдання 15 ====================================");
 // Розкоментуйте після виконаня завдання
@@ -305,7 +322,7 @@ console.log("squareArea(6)", squareArea(6)); // Виводить "Fetching from 
 // Задача 16: Задача: створити функціональний вираз для обчислення кубу числа.
 let cube = function (n) {
   // Повертаємо n в кубі
-
+  return n ** 3;
 }
 
 console.log("Завдання 16 ====================================");
