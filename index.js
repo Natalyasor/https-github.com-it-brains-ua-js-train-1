@@ -310,7 +310,7 @@ function memoizedArea() {
 }
 
 //Створюємо змінну squareArea якій присвоємо результат виконання функції memoizedArea
-let sguareArea = memoizedArea();
+let squareArea = memoizedArea();
 
 console.log("Завдання 15 ====================================");
 // Розкоментуйте після виконаня завдання
